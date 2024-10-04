@@ -6,10 +6,28 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      mulish: "var(--mulish)",
+      openSans: "var(--openSans)",
+    },
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "0",
+        sm: "1rem",
+        lg: "1rem",
+        xl: "1rem",
+        "2xl": "2rem",
+      },
+    },
     extend: {
+      backgroundImage: {
+        "customer-image": "url('/customer.png')",
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        thirdColor: "var(--thirdColor)",
       },
     },
   },

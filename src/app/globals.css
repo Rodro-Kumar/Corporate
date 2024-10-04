@@ -3,25 +3,62 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #313131;
+  --secondary: #676767;
+  --thirdColor: #89d32a;
+  --mulish: "Mulish", sans-serif;
+  --openSans: "Open Sans", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  /* mulish */
+  @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+  /* open sans */
+  @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+  * {
+    @apply m-0 p-0 outline-none box-border;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  img,
+  a,
+  li,
+  ul,
+  ol,
+  div {
+    @apply m-0 p-0;
+  }
+
+  a {
+    @apply no-underline;
+  }
+
+  li {
+    @apply list-none;
+  }
+  img {
+    @apply align-middle;
+  }
+
+  button {
+    outline: 0;
+    border: none;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@layer components {
+  #serviceCard {
+    transition: all linear 0.2s;
+    -webkit-transition: all linear 0.2s;
+    -moz-transition: all linear 0.2s;
+    -ms-transition: all linear 0.2s;
+    -o-transition: all linear 0.2s;
   }
 }
